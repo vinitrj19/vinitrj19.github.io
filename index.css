@@ -1267,3 +1267,87 @@ section {
 .social-icon:hover {
     transform: scale(1.1); /* Optional: slight scale up on hover */
 }
+
+/* Vinit Raj: landing page CTA row + glass "Download CV" button */
+.landing-cta-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.glass-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #091434 !important;
+    background: linear-gradient(180deg, rgba(255,255,255,.72), rgba(255,255,255,.46));
+    -webkit-backdrop-filter: blur(22px) saturate(180%);
+    backdrop-filter: blur(22px) saturate(180%);
+    border: 1px solid rgba(255,255,255,.7);
+    box-shadow: 0 14px 34px rgba(9,20,52,.16), inset 0 1px 0 rgba(255,255,255,.9);
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.glass-button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.6));
+    box-shadow: 0 18px 40px rgba(9,20,52,.2), inset 0 1px 0 rgba(255,255,255,.95);
+}
+.cv-download-icon { flex-shrink: 0; }
+@media (max-width:800px){ .landing-cta-row{gap:12px} }
+
+/* Vinit Raj: fixed navigation + expanded content sections */
+#header-container { position: fixed !important; top: 0 !important; z-index: 50; height: 70px; }
+#menu-button-scale-container, #menu-container { display: none !important; }
+
+/* Floating glass "mirror" navigation pill */
+#fixed-portfolio-nav {
+    position: fixed;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 8px 8px;
+    max-width: calc(100vw - 190px);
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgba(255,255,255,.72), rgba(255,255,255,.46));
+    -webkit-backdrop-filter: blur(22px) saturate(180%);
+    backdrop-filter: blur(22px) saturate(180%);
+    border: 1px solid rgba(255,255,255,.7);
+    box-shadow: 0 14px 34px rgba(9,20,52,.16), inset 0 1px 0 rgba(255,255,255,.9);
+    -webkit-box-reflect: below 3px linear-gradient(to bottom, rgba(0,0,0,0) 45%, rgba(255,255,255,.25));
+    overflow-x: auto;
+    scrollbar-width: none;
+    pointer-events: auto;
+    white-space: nowrap;
+    z-index: 60;
+}
+#fixed-portfolio-nav::-webkit-scrollbar { display: none; }
+.fixed-nav-item { position:relative; color:#091434; font-family:Poppins,sans-serif; font-size:.86rem; font-weight:500; text-decoration:none; padding:8px 15px; border-radius:999px; transition:color .2s ease,background .2s ease; }
+.fixed-nav-item:hover { color:#ff923e; background:rgba(255,146,62,.12); }
+.fixed-nav-item.active { color:#ff923e; background:rgba(255,146,62,.16); }
+.portfolio-content-section { position:relative; min-height:100vh; box-sizing:border-box; padding:130px 0 90px; align-items:flex-start; }
+.portfolio-content-inner { width:min(1100px,100%); margin:0 auto; }
+.portfolio-section-title { margin-bottom:40px; }
+.portfolio-card-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+.portfolio-info-card,.portfolio-certificate-card { background:rgba(255,255,255,.92); border:1px solid rgba(9,20,52,.08); border-radius:20px; padding:28px; box-sizing:border-box; box-shadow:0 18px 45px rgba(147,104,51,.08); }
+.portfolio-info-card h3,.portfolio-certificate-card h3 { margin:12px 0 8px; color:#091434; }
+.portfolio-info-card p { color:#7c8594; line-height:1.65; margin:10px 0; }
+.portfolio-role { color:#ff923e !important; font-weight:600; }
+.portfolio-card-top { display:flex; align-items:center; justify-content:space-between; gap:15px; }
+.portfolio-card-number { color:#ff923e; font-weight:700; font-family:Electrolize,sans-serif; }
+.portfolio-card-date,.portfolio-certificate-card>span { color:#7c8594; font-size:.85rem; }
+.portfolio-tech-line { margin-top:18px; padding-top:15px; border-top:1px solid #eeeeee; color:#7c8594; font-size:.85rem; line-height:1.55; }
+.portfolio-tech-line strong { color:#091434; }
+.portfolio-achievement-list { display:flex; flex-direction:column; gap:12px; }
+.portfolio-achievement-item { display:grid; grid-template-columns:180px 1fr; gap:20px; align-items:center; padding:19px 22px; background:rgba(255,255,255,.9); border-radius:15px; border:1px solid rgba(9,20,52,.07); }
+.portfolio-achievement-item strong { color:#ff923e; }
+.portfolio-achievement-item span { color:#7c8594; }
+.portfolio-certificate-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.portfolio-certificate-card { display:flex; flex-direction:column; gap:8px; transition:transform .25s ease,box-shadow .25s ease; }
+.portfolio-certificate-card:hover { transform:translateY(-4px); box-shadow:0 22px 50px rgba(147,104,51,.14); }
+.portfolio-certificate-card small { color:#7c8594; font-size:.9rem; }
+.portfolio-certificate-card b { margin-top:12px; color:#ff923e; font-size:.9rem; }
+.portfolio-project-grid .portfolio-project-card:last-child { grid-column: 1 / -1; }
+.portfolio-project-grid .portfolio-project-card:last-child p { max-width: 720px; }
+.portfolio-project-link { color:#ff923e; font-weight:600; font-size:.85rem; text-decoration:none; white-space:nowrap; transition:opacity .2s ease; }
+.portfolio-project-link:hover { opacity:.7; }
+@media (max-width:1050px){#fixed-portfolio-nav{max-width:calc(100vw - 140px);gap:0}.fixed-nav-item{font-size:.8rem;padding:7px 11px}}
+@media (max-width:800px){#header-container{height:62px;padding-top:8px}#fixed-portfolio-nav{left:64px;right:14px;top:10px;transform:none;max-width:none;justify-content:flex-start;padding:6px 6px}.fixed-nav-item{font-size:.76rem;flex:0 0 auto;padding:6px 10px}.portfolio-content-section{padding-top:100px}.portfolio-card-grid,.portfolio-certificate-grid,.portfolio-project-grid{grid-template-columns:1fr}.portfolio-project-grid .portfolio-project-card:last-child p{max-width:none}.portfolio-achievement-item{grid-template-columns:1fr;gap:5px}}

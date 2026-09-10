@@ -138,8 +138,20 @@
                 </div>
             </div>
 
-            <!--Menu Button-->
-            <div id="menu-button-scale-container">
+            <!--Fixed Portfolio Navigation-->
+            <nav id="fixed-portfolio-nav" aria-label="Primary navigation">
+                <a class="fixed-nav-item active" href="#home" data-nav="home">Home</a>
+                <a class="fixed-nav-item" href="#about" data-nav="about">About</a>
+                <a class="fixed-nav-item" href="#experience" data-nav="experience">Experience</a>
+                <a class="fixed-nav-item" href="#skills" data-nav="skills">Skills</a>
+                <a class="fixed-nav-item" href="#projects" data-nav="projects">Projects</a>
+                <a class="fixed-nav-item" href="#achievements" data-nav="achievements">Achievements</a>
+                <a class="fixed-nav-item" href="#certificates" data-nav="certificates">Certificates</a>
+                <a class="fixed-nav-item" href="#contact" data-nav="contact">Contact</a>
+            </nav>
+
+            <!--Legacy menu button retained for original JavaScript dependencies; hidden visually.-->
+            <div id="menu-button-scale-container" aria-hidden="true">
                 <div id="menu-button" class="center column overlay-button orange-hover">
                     <div id="menu-button-bar-0" class="menu-button-bar"></div>
                     <div id="menu-button-bar-1" class="menu-button-bar"></div>
@@ -231,8 +243,17 @@
                     I build practical projects with code, data and AI.
                 </text>
 
-                <foreignObject x="8" y="250" height="100" width="300" requiredExtensions="http://www.w3.org/1999/xhtml">
-                    <div id="landing-cta-button" class="big-button orange-hover">Get in touch</div>
+                <foreignObject x="8" y="250" height="100" width="480" requiredExtensions="http://www.w3.org/1999/xhtml">
+                    <div class="landing-cta-row">
+                        <div id="landing-cta-button" class="big-button orange-hover">Get in touch</div>
+                        <div id="landing-cv-button" class="big-button glass-button">
+                            <svg class="cv-download-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 3V15M12 15L7 10M12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4 17V19C4 20.1046 4.89543 21 6 21H18C19.1046 21 20 20.1046 20 19V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Download CV
+                        </div>
+                    </div>
                 </foreignObject>
             </svg>
         </section>
@@ -242,10 +263,10 @@
     <div id="scroll-container" class="center column">
 
         <!--About Container-->
-        <section id="about-section" class="content-width">
+        <section id="about-section" class="content-width" data-portfolio-section="about">
             <div id="about-content-container">
                 <!--Header Container SVG-->
-                <svg id="skills-svg" viewBox="-2 -2 506 815" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMid">
+                <svg id="skills-svg" viewBox="-2 -2 506 1040" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMid">
 
                     <!--Defs-->
                     <defs>
@@ -320,16 +341,16 @@
                     </g>
 
                     <!--Skills -->
-                    <g transform="translate(0 188)" id="about-svg-skills">
+                    <g transform="translate(0 188)" id="about-svg-skills" data-portfolio-anchor="skills">
                         <!--Background-->
                         <polyline id="about-skills-background" class="about-box-background"
-                            points="250,35 200,35 200,10 190,0 10,0 0,10 0,245 10,255 197,255 215,273 215,290 250,290 400,290 410,280 490,280 500,270 500,55 490,45 310,45 300,35" />
+                            points="250,35 200,35 200,10 190,0 10,0 0,10 0,425 10,435 197,435 215,453 215,470 250,470 400,470 410,460 490,460 500,450 500,55 490,45 310,45 300,35" />
 
                         <!--Lines-->
                         <polyline class="about-box-line"
-                            points="250,35 200,35 200,10 190,0 10,0 0,10 0,245 10,255 197,255 215,273 215,290 250,290" />
+                            points="250,35 200,35 200,10 190,0 10,0 0,10 0,425 10,435 197,435 215,453 215,470 250,470" />
                         <polyline class="about-box-line"
-                            points="250,35 300,35 310,45 490,45 500,55 500,270 490,280 410,280 400,290 250,290" />
+                            points="250,35 300,35 310,45 490,45 500,55 500,450 490,460 410,460 400,470 250,470" />
 
                         <!--Header Mask-->
                         <mask id="skills-header-mask">
@@ -345,7 +366,7 @@
                         <!--Header Text-->
                         <text x="71" y="25" class="about-header" font-size="18" font-weight="bold">SKILLS</text>
 
-                        <foreignObject x="0" y="60" width="506" height="340">
+                        <foreignObject x="0" y="60" width="506" height="410">
                             <!--Skills Content-->
                             <div id="about-skills-container" class="about-container">
                                 <!--Main Render Container-->
@@ -357,7 +378,7 @@
                     </g>
 
                     <!--About-->
-                    <g transform="translate(0 459)" id="about-svg-about">
+                    <g transform="translate(0 680)" id="about-svg-about">
 
                         <!--Background-->
                         <polyline id="about-about-background" class="about-box-background"
@@ -449,7 +470,7 @@
                         <polyline class="about-down-animation-line"
                             points="0,0 8,0 13,5 13,22 110,22 120,32 275,32 283,40" />
                     </g>
-                    <g transform="translate(403 496)">
+                    <g transform="translate(403 717)">
                         <polyline class="about-down-animation-line" points="0,0 70,0 78,8" />
                     </g>
 
@@ -457,10 +478,10 @@
                     <g transform="translate(193 160)">
                         <polyline class="about-up-animation-line" points="0,7 275,7 282,0" />
                     </g>
-                    <g transform="translate(403 468)">
+                    <g transform="translate(403 689)">
                         <polyline class="about-up-animation-line" points="0,8 70,8 78,0" />
                     </g>
-                    <g transform="translate(20 784)">
+                    <g transform="translate(20 1005)">
                         <polyline class="about-up-animation-line" points="0,0 9,9 74,9 84,19 450,19 458,11" />
                     </g>
 
@@ -468,52 +489,134 @@
             </div>
         </section>
 
-        <div id="hover-icon-color-switch"></div>
+                <div id="hover-icon-color-switch"></div>
+
+        <!--Experience-->
+        <section id="experience-section" class="portfolio-content-section content-width" data-portfolio-section="experience">
+            <div class="portfolio-content-inner">
+                <div class="section-subheader-container"><hr><h5>Journey</h5></div>
+                <h1 class="portfolio-section-title">Experience</h1>
+                <div class="portfolio-card-grid">
+                    <article class="portfolio-info-card">
+                        <div class="portfolio-card-top"><span class="portfolio-card-number">01</span><span class="portfolio-card-date">25 Jul 2026 – 31 Jul 2026</span></div>
+                        <h3>FPT Software | Global Immersion Program — Vietnam</h3>
+                        <p class="portfolio-role">Participant · FPT Software</p>
+                        <p>Participated in an international learning program covering AI in Cybersecurity, AI in Robotics, intelligent automation, AI governance, and AI-native organizations.</p>
+                        <p>Attended industry sessions and professional interactions that strengthened my understanding of real-world AI applications, teamwork, communication, and workplace practices.</p>
+                        <div class="portfolio-tech-line"><strong>Tech Stack:</strong> FPT Software, Artificial Intelligence, Cybersecurity, Robotics, Intelligent Automation, AI Governance</div>
+                    </article>
+                    <article class="portfolio-info-card">
+                        <div class="portfolio-card-top"><span class="portfolio-card-number">02</span><span class="portfolio-card-date">11 Jan 2026 – 26 Jan 2026</span></div>
+                        <h3>Winter Training Program | IIT Kanpur — Python for Data Science</h3>
+                        <p class="portfolio-role">Trainee · IIT Kanpur</p>
+                        <p>Completed structured training in Python for Data Science, strengthening programming, data handling, analysis, and practical problem-solving skills.</p>
+                        <p>Applied Python-based tools and concepts to work with data and build a stronger foundation for data science projects.</p>
+                        <div class="portfolio-tech-line"><strong>Tech Stack:</strong> Python, Data Science, Pandas, NumPy, Data Analysis</div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
         <!--Work Container-->
-        <section id="work-section">
-            <div id="work-background"></div>
-
-            <div id="work-content" class="content-width column">
-                <div class="column" id="work-header-container">
-                    <div class="section-subheader-container">
-                        <hr>
-                        <h5>Portfolio</h5>
-                    </div>
-                    <h1 class="section-header-container">
-                        Some things
-                    </h1>
-                    <h1 class="section-header-container">
-                        I've worked on
-                    </h1>
+        <section id="work-section" class="portfolio-content-section content-width" data-portfolio-section="projects">
+            <div class="portfolio-content-inner">
+                <div class="section-subheader-container"><hr><h5>Portfolio</h5></div>
+                <h1 class="portfolio-section-title">Projects</h1>
+                <div class="portfolio-card-grid portfolio-project-grid">
+                    <article class="portfolio-info-card portfolio-project-card">
+                        <div class="portfolio-card-top"><span class="portfolio-card-number">01</span><a class="portfolio-project-link" href="https://github.com/vinitrj19/Financial-Behavior-Analyzer" target="_blank" rel="noopener">GitHub ↗</a></div>
+                        <h3>Financial Behavior Analyzer</h3>
+                        <p>Built an end-to-end system that cleans transaction data, standardizes descriptions, categorizes expenses, and analyzes spending patterns.</p>
+                        <p>Analyzed 477 real transactions totaling approximately ₹1.63 lakh and developed an ML model for overspending detection with around 73% accuracy, with focus on recall because of class imbalance.</p>
+                        <div class="portfolio-tech-line"><strong>Tech Stack:</strong> Python, Pandas, NumPy, Matplotlib, Scikit-learn, Regex, Jupyter Notebook</div>
+                    </article>
+                    <article class="portfolio-info-card portfolio-project-card">
+                        <div class="portfolio-card-top"><span class="portfolio-card-number">02</span><a class="portfolio-project-link" href="https://github.com/vinitrj19/electricity-management-energy-efficient-system" target="_blank" rel="noopener">GitHub ↗</a></div>
+                        <h3>Electricity Management &amp; Energy Efficient System</h3>
+                        <p>An Arduino-based smart classroom automation prototype developed to reduce unnecessary electricity consumption. In many classrooms, lights and fans are manually operated and may stay switched ON even after students leave the room — this system automates that.</p>
+                        <div class="portfolio-tech-line"><strong>Tech Stack:</strong> Arduino Uno, IR Break-Beam Sensor, PIR Sensor, 16×2 I2C LCD, Arduino IDE, LiquidCrystal_I2C, Proteus</div>
+                    </article>
+                    <article class="portfolio-info-card portfolio-project-card">
+                        <div class="portfolio-card-top"><span class="portfolio-card-number">03</span><a class="portfolio-project-link" href="https://github.com/vinitrj19/BLOODY-DADDY" target="_blank" rel="noopener">GitHub ↗</a></div>
+                        <h3>Bloody Daddy</h3>
+                        <p>A web-based initiative designed to connect generous blood donors with patients in urgent need. By transforming individual acts of kindness into a powerful, life-saving network, this platform makes finding a matching donor as simple as running a search.</p>
+                        <div class="portfolio-tech-line"><strong>Tech Stack:</strong> Python, HTML, CSS, JavaScript</div>
+                    </article>
+                    <article class="portfolio-info-card portfolio-project-card">
+                        <div class="portfolio-card-top"><span class="portfolio-card-number">04</span><a class="portfolio-project-link" href="https://github.com/vinitrj19/VibeCompare" target="_blank" rel="noopener">GitHub ↗</a></div>
+                        <h3>VibeCompare: Premium Price Aggregator</h3>
+                        <p>A minimalist, high-end price comparison platform built during the GeeksforGeeks x Google "Build with AI" Camp, using a "Think → Build → Publish" workflow to create a premium, editorial-style experience inspired by brands like Zara and Aurelia. Complete project built by me.</p>
+                        <div class="portfolio-tech-line"><strong>Tech Stack:</strong> React (Vite), Tailwind CSS, Node.js, Express, Docker, Google Cloud Run, Google Antigravity &amp; Gemini</div>
+                    </article>
+                    <article class="portfolio-info-card portfolio-project-card">
+                        <div class="portfolio-card-top"><span class="portfolio-card-number">05</span><a class="portfolio-project-link" href="https://github.com/vinitrj19/air-quality-analysis-india" target="_blank" rel="noopener">GitHub ↗</a></div>
+                        <h3>Air Quality Analysis &amp; AQI Prediction</h3>
+                        <p>A data science project analyzing air pollution trends across major Indian cities and understanding the impact of PM2.5 on Air Quality Index (AQI). Completely built by me.</p>
+                        <div class="portfolio-tech-line"><strong>Tech Stack:</strong> Python, Pandas, NumPy, Matplotlib, Jupyter Notebook</div>
+                    </article>
                 </div>
+            </div>
 
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="hide">
-                    <path id="code-path"
-                        d="M414.8 40.79L286.8 488.8C281.9 505.8 264.2 515.6 247.2 510.8C230.2 505.9 220.4 488.2 225.2 471.2L353.2 23.21C358.1 6.216 375.8-3.624 392.8 1.232C409.8 6.087 419.6 23.8 414.8 40.79H414.8zM518.6 121.4L630.6 233.4C643.1 245.9 643.1 266.1 630.6 278.6L518.6 390.6C506.1 403.1 485.9 403.1 473.4 390.6C460.9 378.1 460.9 357.9 473.4 345.4L562.7 256L473.4 166.6C460.9 154.1 460.9 133.9 473.4 121.4C485.9 108.9 506.1 108.9 518.6 121.4V121.4zM166.6 166.6L77.25 256L166.6 345.4C179.1 357.9 179.1 378.1 166.6 390.6C154.1 403.1 133.9 403.1 121.4 390.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4L121.4 121.4C133.9 108.9 154.1 108.9 166.6 121.4C179.1 133.9 179.1 154.1 166.6 166.6V166.6z" />
-                </svg>
-
-                <!--Render Container-->
-                <div id="work-render-container"></div>
-
-                <!--Navigation-->
-                <div id="work-navigation-container" class="row center">
-                    <div id="work-back-button" class="work-navigation-button work-disabled-navigation-button orange-hover">
-                        <svg viewBox="-512 0 512 512" xmlns="http://www.w3.org/2000/svg" height="28" width="28">
-                            <use fill="white" href="#arrow-path" style="transform: scaleX(-1)"></use>
-                        </svg>
+            <!--Legacy 3D carousel markup kept in the DOM (hidden) so existing scripts keep working-->
+            <div style="position:absolute;visibility:hidden;pointer-events:none;height:1px;width:1px;overflow:hidden;" aria-hidden="true">
+                <div id="work-background"></div>
+                <div id="work-content" class="content-width column">
+                    <div class="column" id="work-header-container">
+                        <div class="section-subheader-container"><hr><h5>Portfolio</h5></div>
+                        <h1 class="section-header-container">Some things</h1>
+                        <h1 class="section-header-container">I've worked on</h1>
                     </div>
-                    <div id="work-next-button" class="work-navigation-button orange-hover">
-                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" height="28" width="28">
-                            <use fill="white" href="#arrow-path"></use>
-                        </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="hide">
+                        <path id="code-path"
+                            d="M414.8 40.79L286.8 488.8C281.9 505.8 264.2 515.6 247.2 510.8C230.2 505.9 220.4 488.2 225.2 471.2L353.2 23.21C358.1 6.216 375.8-3.624 392.8 1.232C409.8 6.087 419.6 23.8 414.8 40.79H414.8zM518.6 121.4L630.6 233.4C643.1 245.9 643.1 266.1 630.6 278.6L518.6 390.6C506.1 403.1 485.9 403.1 473.4 390.6C460.9 378.1 460.9 357.9 473.4 345.4L562.7 256L473.4 166.6C460.9 154.1 460.9 133.9 473.4 121.4C485.9 108.9 506.1 108.9 518.6 121.4V121.4zM166.6 166.6L77.25 256L166.6 345.4C179.1 357.9 179.1 378.1 166.6 390.6C154.1 403.1 133.9 403.1 121.4 390.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4L121.4 121.4C133.9 108.9 154.1 108.9 166.6 121.4C179.1 133.9 179.1 154.1 166.6 166.6V166.6z" />
+                    </svg>
+                    <div id="work-render-container"></div>
+                    <div id="work-navigation-container" class="row center">
+                        <div id="work-back-button" class="work-navigation-button work-disabled-navigation-button orange-hover">
+                            <svg viewBox="-512 0 512 512" xmlns="http://www.w3.org/2000/svg" height="28" width="28"><use fill="white" href="#arrow-path" style="transform: scaleX(-1)"></use></svg>
+                        </div>
+                        <div id="work-next-button" class="work-navigation-button orange-hover">
+                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" height="28" width="28"><use fill="white" href="#arrow-path"></use></svg>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+                <!--Achievements-->
+        <section id="achievements-section" class="portfolio-content-section content-width" data-portfolio-section="achievements">
+            <div class="portfolio-content-inner">
+                <div class="section-subheader-container"><hr><h5>Milestones</h5></div>
+                <h1 class="portfolio-section-title">Achievements</h1>
+                <div class="portfolio-achievement-list">
+                    <div class="portfolio-achievement-item"><strong>🥇 1st Place</strong><span>Python Programming Competition — 260 participants</span></div>
+                    <div class="portfolio-achievement-item"><strong>🏆 Top 5</strong><span>TechXpo — E-Blood Bank</span></div>
+                    <div class="portfolio-achievement-item"><strong>🏆 Top 5</strong><span>BEEEyond Limits — University Exhibition</span></div>
+                    <div class="portfolio-achievement-item"><strong>🏆 Top 7</strong><span>WEB-A-THON 2.0 — Travel Manager</span></div>
+                    <div class="portfolio-achievement-item"><strong>🏆 Top 10</strong><span>Agentic AI Competition — Agentic AI Career Coach</span></div>
+                    <div class="portfolio-achievement-item"><strong>💻 40+</strong><span>LeetCode problems solved through regular coding practice</span></div>
+                    <div class="portfolio-achievement-item"><strong>🤝 AIESEC</strong><span>Volunteering, debates, and Outgoing Global Talent / Teacher department activities</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!--Certificates-->
+        <section id="certificates-section" class="portfolio-content-section content-width" data-portfolio-section="certificates">
+            <div class="portfolio-content-inner">
+                <div class="section-subheader-container"><hr><h5>Learning</h5></div>
+                <h1 class="portfolio-section-title">Certificates</h1>
+                <div class="portfolio-card-grid portfolio-certificate-grid">
+                    <a class="portfolio-certificate-card" target="_blank" rel="noopener" href="https://lnkd.in/p/dTafxuC8"><span>Jul 2026</span><h3>FPT Software — Global Immersion Program</h3><small>FPT Software</small><b>View Certificate ↗</b></a>
+                    <a class="portfolio-certificate-card" target="_blank" rel="noopener" href="https://lnkd.in/p/gFZy-scc"><span>Apr 2026</span><h3>Lovely Professional University — BEEEyond Limits: Taking Innovation Beyond the Basics</h3><small>Lovely Professional University</small><b>View Certificate ↗</b></a>
+                    <a class="portfolio-certificate-card" target="_blank" rel="noopener" href="https://www.linkedin.com/posts/hi-this-is-vinit-raj19_iitkanpur-datascience-python-activity-7427969564430200832-Uh69?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFzTp9UBZ1RXBldcBBB7MaZZrGJPalo0Ces"><span>Mar 2026</span><h3>IIT Kanpur — Python for Data Science</h3><small>IIT Kanpur</small><b>View Certificate ↗</b></a>
+                    <a class="portfolio-certificate-card" target="_blank" rel="noopener" href="https://www.linkedin.com/posts/hi-this-is-vinit-raj19_most-of-my-learning-doesnt-show-up-on-a-activity-7425540487085768704-HN7o?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFzTp9UBZ1RXBldcBBB7MaZZrGJPalo0Ces"><span>Feb 2026</span><h3>Google — Using Python to Interact with the Operating System</h3><small>Google</small><b>View Certificate ↗</b></a>
+                    <a class="portfolio-certificate-card" target="_blank" rel="noopener" href="https://www.linkedin.com/posts/hi-this-is-vinit-raj19_python-programming-google-activity-7391166995167203329-TSTe?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFzTp9UBZ1RXBldcBBB7MaZZrGJPalo0Ces"><span>Nov 2025</span><h3>Google — Crash Course on Python</h3><small>Google</small><b>View Certificate ↗</b></a>
+                </div>
+            </div>
+        </section>
+
         <!--Contact Container-->
-        <section id="contact-section" class="content-width column">
+        <section id="contact-section" class="content-width column" data-portfolio-section="contact">
             <div class="column" id="contact-header-container">
                 <div class="section-subheader-container">
                     <hr>

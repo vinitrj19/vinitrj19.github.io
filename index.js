@@ -32713,7 +32713,7 @@ class Jb {
       y: e,
       duration: 1,
     }),
-      this.sounds.play("mouseWheel");
+      (this.sounds.play("mouseWheel"), hapticTick(8));
   }
   setDesktop1() {
     (this.desktop1 = this.room.baseModel.children.find(
@@ -32921,7 +32921,7 @@ class tw {
       (this.button.material = this.lab.material),
       (this.button.hoverIcon = "pointer"),
       (this.button.onClick = () => {
-        this.sounds.play("buttonClick"), this.switchActivity();
+        (this.sounds.play("buttonClick"), hapticTick()), this.switchActivity();
       });
   }
   switchActivity() {
@@ -34191,7 +34191,7 @@ class vw {
   clickEvent() {
     if (!this.experience.ui.intro.clickCTAVisible) {
       const e = this.experience.ui.soundButton;
-      e.active ? e.deactivate() : e.activate(), this.sounds.play("buttonClick");
+      e.active ? e.deactivate() : e.activate(), (this.sounds.play("buttonClick"), hapticTick());
     }
   }
 }
@@ -37520,10 +37520,10 @@ class rM {
   }
   addButtonEventListeners() {
     this.domElements.backButton.addEventListener("click", () => {
-      this.sounds.play("buttonClick"), this.moveBack();
+      (this.sounds.play("buttonClick"), hapticTick()), this.moveBack();
     }),
       this.domElements.nextButton.addEventListener("click", () => {
-        this.sounds.play("buttonClick"), this.moveForward();
+        (this.sounds.play("buttonClick"), hapticTick()), this.moveForward();
       });
   }
   initSwipes() {
@@ -37614,48 +37614,23 @@ class rM {
   }
 }
 const oM = [
-    {
-      id: 0,
-      name: "financial behavior analyzer",
-      description: "A data analysis and machine learning system that cleans real transaction data, categorizes expenses, analyzes spending patterns, and detects potential overspending behavior.",
-      image: "images/projects/codequarry.png",
-      tags: ["python", "pandas", "scikit-learn", "data"],
-      alt: "Financial Behavior Analyzer",
-    },
-    {
-      id: 1,
-      name: "electricity management system",
-      description: "An automated classroom power-management prototype using IR and PIR sensors with Arduino to detect occupancy and movement and control simulated lights and fans.",
-      image: "images/projects/projecthub.png",
-      tags: ["arduino", "iot", "sensors", "proteus"],
-      alt: "Electricity Management and Energy Efficient System",
-    },
-    {
-      id: 2,
-      name: "e-blood bank",
-      description: "A web-based platform designed to connect blood donors with recipients who need blood urgently, with the goal of making donor-recipient access easier across cities.",
-      image: "images/projects/studybuddy.jpeg",
-      tags: ["python", "html", "css", "javascript"],
-      alt: "E-Blood Bank",
-    },
-    {
-      id: 3,
-      name: "travel manager",
-      description: "A hackathon project developed for WEB-A-THON 2.0, focused on building a practical travel-management solution.",
-      image: "images/projects/krushigram.png",
-      tags: ["hackathon", "web"],
-      alt: "Travel Manager",
-    },
-    {
-      id: 4,
-      name: "agentic ai career coach",
-      description: "A competition project exploring an AI-based career coaching concept, developed for an Agentic AI competition.",
-      image: "images/projects/vaporui.jpeg",
-      tags: ["ai", "agentic ai", "career"],
-      alt: "Agentic AI Career Coach",
-    },
+    { id: 0, name: "financial behavior analyzer", description: "Built an end-to-end system that cleans transaction data, standardizes descriptions, categorizes expenses, and analyzes spending patterns. Analyzed 477 real transactions totaling approximately ₹1.63 lakh and developed an ML model for overspending detection with around 73% accuracy, with focus on recall because of class imbalance.", image: "images/projects/codequarry.png", tags: ["python", "pandas", "scikit-learn", "data"], alt: "Financial Behavior Analyzer", github: "https://github.com/vinitrj19/Financial-Behavior-Analyzer" },
+    { id: 1, name: "electricity management & energy efficient system", description: "Electricity Management & Energy Efficient System is an Arduino-based smart classroom automation prototype developed to reduce unnecessary electricity consumption. In many classrooms, electrical appliances such as lights and fans are manually operated and may remain switched ON even after students leave the room.", image: "images/projects/projecthub.png", tags: ["arduino", "iot", "sensors", "proteus"], alt: "Electricity Management and Energy Efficient System", github: "https://github.com/vinitrj19/electricity-management-energy-efficient-system" },
+    { id: 2, name: "bloody daddy", description: "Bloody Daddy is a web-based initiative designed to connect generous blood donors with patients in urgent need. By transforming individual acts of kindness into a powerful, life-saving network, this platform ensures that finding a matching donor is as simple as running a search.", image: "images/projects/studybuddy.jpeg", tags: ["python", "html", "css", "javascript"], alt: "Bloody Daddy", github: "https://github.com/vinitrj19/BLOODY-DADDY" },
+    { id: 3, name: "vibecompare: premium price aggregator", description: "VibeCompare is a minimalist, high-end price comparison platform developed during the GeeksforGeeks x Google Build with AI Camp. It leverages the Think → Build → Publish workflow to create a premium, editorial-style user experience inspired by brands like Zara and Aurelia. Complete project built by me.", image: "images/projects/krushigram.png", tags: ["react", "tailwind", "express", "ai"], alt: "VibeCompare: Premium Price Aggregator", github: "https://github.com/vinitrj19/VibeCompare" },
+    { id: 4, name: "air quality analysis & aqi prediction", description: "A data science project focused on analyzing air pollution trends across major Indian cities and understanding the impact of PM2.5 on Air Quality Index (AQI). Completely built by me.", image: "images/projects/vaporui.jpeg", tags: ["python", "pandas", "numpy", "data"], alt: "Air Quality Analysis & AQI Prediction", github: "https://github.com/vinitrj19/air-quality-analysis-india" },
   ],
   aM = {
+    python: '<div class="work-item-tag" style="background:#E8F5E9;color:#2E7D32;">Python</div>',
+    pandas: '<div class="work-item-tag" style="background:#EEF2FF;color:#4338CA;">Pandas</div>',
+    numpy: '<div class="work-item-tag" style="background:#E0F2FE;color:#0369A1;">NumPy</div>',
+    "scikit-learn": '<div class="work-item-tag" style="background:#FFF7ED;color:#C2410C;">Scikit-learn</div>',
+    data: '<div class="work-item-tag" style="background:#F3E8FF;color:#7E22CE;">Data</div>',
+    arduino: '<div class="work-item-tag" style="background:#E0F7FA;color:#00695C;">Arduino</div>',
+    iot: '<div class="work-item-tag" style="background:#F0FDFA;color:#0F766E;">IoT</div>',
+    sensors: '<div class="work-item-tag" style="background:#F1F5F9;color:#475569;">Sensors</div>',
+    proteus: '<div class="work-item-tag" style="background:#FEF3C7;color:#92400E;">Proteus</div>',
+    ai: '<div class="work-item-tag" style="background:#FCE7F3;color:#9D174D;">AI</div>',
     html: '<div class="work-item-tag" style="background: white; border: 1px solid #7C8594; color: #7C8594">HTML</div>',
     css: '<div class="work-item-tag" style="background: white; border: 1px solid #7C8594; color: #7C8594">CSS</div>',
     javascript:
@@ -37765,35 +37740,15 @@ class lM {
   //   );
   // }
   renderButtons(e) {
-    let t = "";
-    if (e.liveview) {
-        // Render only the "Live View" button if a live view link is present
-        t = `
-            <div id="work-item-orange-button-${e.id}" class="work-item-orange-button small-button center orange-hover" style="width: 100%; margin: 0;">
-                Live View
-            </div>
-        `;
-    } else if (e.twitter) {
-        // Render Twitter button if a Twitter link is present
-        t = `
-            <div id="work-item-orange-button-${e.id}" class="work-item-orange-button small-button center orange-hover" style="width: 100%; margin: 0;">
-                <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="24px" height="24px" style="margin-right: 5px">    
-                    <path d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z"/>
-                </svg>
-                Stay up to date
-            </div>
-        `;
-    } else {
-        // Render a "Work in progress" button if no liveview or Twitter link is present
-        t = `
-            <div id="work-item-gray-button-${e.id}" class="work-item-gray-button center" style="width: 100%; background: #a7adb8; cursor: unset;">
-                Work in progress
-            </div>
-        `;
+    if (e.github) {
+      return `
+        <div id="work-item-gray-button-${e.id}" class="work-item-gray-button center gray-hover" style="width: 100%; margin: 0;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="code-icon"><use href="#code-path"/></svg>
+          <span>Source Code</span>
+        </div>`;
     }
-    return t;
-}
-
+    return `<div id="work-item-gray-button-${e.id}" class="work-item-gray-button center" style="width: 100%; background: #a7adb8; cursor: unset;">Work in progress</div>`;
+  }
   renderTags(e) {
     let t = "";
     for (let n = 0; n < e.length; n++) t += this.tags[e[n]];
@@ -37832,71 +37787,43 @@ class lM {
   addEventListenersToCard(e) {
     const t = document.getElementById("work-item-" + e.id);
     t.addEventListener("click", () => {
-        if (
-            t.classList.contains("work-inactive-item-container") &&
-            document
-                .getElementById("work-item-0")
-                .classList.contains("work-item-container-transition")
-        ) {
-            this.experience.ui.work.cards.currentItemIndex = -e.id + 4;
-            this.experience.ui.work.cards.updatePositions();
-            this.sounds.play("buttonClick");
-        }
+      if (t.classList.contains("work-inactive-item-container") && document.getElementById("work-item-0").classList.contains("work-item-container-transition")) {
+        this.experience.ui.work.cards.currentItemIndex = -e.id + 4;
+        this.experience.ui.work.cards.updatePositions();
+        (this.sounds.play("buttonClick"), hapticTick());
+      }
     });
-
-    if (e.liveview) {
-        document
-            .getElementById("work-item-orange-button-" + e.id)
-            .addEventListener("click", () => {
-                window.open(e.liveview, "_blank").focus();
-            });
-    } else if (e.twitter) {
-        document
-            .getElementById("work-item-orange-button-" + e.id)
-            .addEventListener("click", () => {
-                window.open(e.twitter, "_blank").focus();
-            });
+    if (e.github) {
+      const button = document.getElementById("work-item-gray-button-" + e.id);
+      button && button.addEventListener("click", (event) => { event.stopPropagation(); window.open(e.github, "_blank", "noopener,noreferrer"); });
     }
-}
-
+  }
 }
 const cM = [
-  { name: "python", width: "90%" },
-  { name: "c / c++", width: "82%" },
-  { name: "data science", width: "86%" },
-  { name: "web development", width: "76%" },
-  { name: "machine learning", width: "72%" },
-]
+  { name: "python", width: "92%" },
+  { name: "c", width: "82%" },
+  { name: "c++", width: "82%" },
+  { name: "javascript", width: "78%" },
+  { name: "html", width: "76%" },
+  { name: "css", width: "76%" },
+  { name: "pandas", width: "86%" },
+  { name: "numpy", width: "84%" },
+  { name: "matplotlib", width: "80%" },
+  { name: "github", width: "80%" },
+  { name: "jupyter notebook", width: "82%" },
+];
 class hM {
   constructor() {
-    he(this, "domElements", {
-      skillsRenderContainer: document.getElementById(
-        "about-skills-render-container"
-      ),
-    });
+    he(this, "domElements", { skillsRenderContainer: document.getElementById("about-skills-render-container") });
     (this.skills = cM), this.renderSkills();
   }
   renderSkills() {
     this.skills.forEach((e) => {
-      this.domElements.skillsRenderContainer.insertAdjacentHTML(
-        "beforeend",
-        `
-                <div id="about-skill-container-${this.skills.indexOf(
-                  e
-                )}" class="row about-skill-container">
-                    <span id="about-skill-span-${this.skills.indexOf(
-                      e
-                    )}" class="about-skill-span">${e.name}</span>
-                    <div class="about-skill-bar-container">
-                        <div id="about-skill-bar-${this.skills.indexOf(
-                          e
-                        )}" class="about-skill-bar" style="width: ${
-          e.width
-        }"></div>
-                    </div>
-                </div>
-            `
-      );
+      this.domElements.skillsRenderContainer.insertAdjacentHTML("beforeend", `
+        <div id="about-skill-container-${this.skills.indexOf(e)}" class="row about-skill-container">
+          <span id="about-skill-span-${this.skills.indexOf(e)}" class="about-skill-span">${e.name}</span>
+          <div class="about-skill-bar-container"><div id="about-skill-bar-${this.skills.indexOf(e)}" class="about-skill-bar" style="width:${e.width}"></div></div>
+        </div>`);
     });
   }
 }
@@ -38199,7 +38126,7 @@ class fM extends Ai {
   }
   menuButtonClick() {
     this.domElements.menuButton.addEventListener("click", () => {
-      this.isAnimating || this.sounds.play("buttonClick"),
+      this.isAnimating || (this.sounds.play("buttonClick"), hapticTick()),
         this.switchVisiblity();
     });
   }
@@ -38490,7 +38417,7 @@ let pM = class {
       this.domElements.button.addEventListener("click", () => {
         this.transition.isShowing ||
           (this.active ? this.deactivate() : this.activate(),
-          this.sounds.play("buttonClick"));
+          (this.sounds.play("buttonClick"), hapticTick()));
       }),
       window.addEventListener("keydown", () => {
         event.key === "m" &&
@@ -38962,7 +38889,7 @@ class gM {
     this.items.forEach((e) => {
       e.elements.forEach((t) => {
         t.addEventListener("click", () => {
-          this.sounds.play("buttonClick"), this.openItem(e);
+          (this.sounds.play("buttonClick"), hapticTick()), this.openItem(e);
         });
       });
     });
@@ -39215,7 +39142,7 @@ class yM {
   }
   addSubmitButtonEventListener() {
     this.domElements.submitButton.addEventListener("click", () => {
-      this.sounds.play("buttonClick"),
+      (this.sounds.play("buttonClick"), hapticTick()),
         this.hideAllErrors(),
         this.checkNameInput();
     });
@@ -39305,7 +39232,7 @@ class yM {
   }
   addResultButtonEventListener() {
     this.domElements.resultButton.addEventListener("click", () => {
-      this.sounds.play("buttonClick"),
+      (this.sounds.play("buttonClick"), hapticTick()),
         this.showContainer("form"),
         this.domElements.errorLines[0].classList.contains("hide") &&
           this.clearInputs();
@@ -42078,7 +42005,7 @@ class EM {
       },
       {
         name: "roomAmbience",
-        files: ["/sounds/room-ambience.mp3"],
+        files: ["/sounds/lab-ambience.mp3"],
         group: "landing",
         volume: 0.1,
         html5: !0,
@@ -42370,3 +42297,73 @@ class ye {
   }
 }
 new ye(document.getElementById("main-canvas"));
+
+
+function hapticTick(ms = 10) { if (navigator.vibrate) navigator.vibrate(ms); }
+
+/* Vinit Raj: Download CV button — uses a synthetic anchor so the download
+   still fires even if this is the very first click on the page (the intro
+   overlay's own click handler calls preventDefault() on that first click). */
+(() => {
+  const initDownloadCV = () => {
+    const btn = document.getElementById("landing-cv-button");
+    if (!btn) return;
+    btn.addEventListener("click", (event) => {
+      event.preventDefault();
+      hapticTick();
+      const a = document.createElement("a");
+      a.href = "Vinit_Raj_CV.pdf";
+      a.download = "Vinit_Raj_CV.pdf";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    });
+  };
+  if (document.readyState === "complete") setTimeout(initDownloadCV, 1000); else window.addEventListener("load", () => setTimeout(initDownloadCV, 1000));
+})();
+
+/* Fixed navigation for Vinit Raj's portfolio. */
+(() => {
+  const initFixedNavigation = () => {
+    const nav = document.getElementById("fixed-portfolio-nav");
+    if (!nav) return;
+    const experience = new ye();
+    const landing = experience.ui.landingPage;
+    const scroll = experience.ui.scroll;
+    const legacyItems = document.querySelectorAll(".menu-item");
+    const goTo = (id) => {
+      const target = document.getElementById(id);
+      if (!target) return;
+      if (landing.visible && legacyItems[1]) {
+        legacyItems[1].click();
+      }
+      setTimeout(() => {
+        scroll.scrollY = Math.max(0, target.offsetTop);
+        scroll.performScroll(0, "force");
+      }, 80);
+    };
+    nav.querySelectorAll(".fixed-nav-item").forEach((link) => link.addEventListener("click", (event) => {
+      event.preventDefault();
+      hapticTick();
+      const n = link.dataset.nav;
+      if (n === "home") return document.getElementById("logo-click-container")?.click();
+      if (n === "about" && legacyItems[1]) return legacyItems[1].click();
+      if (n === "contact" && legacyItems[3]) return legacyItems[3].click();
+      if (n === "experience") return goTo("experience-section");
+      if (n === "projects") return goTo("work-section");
+      if (n === "skills") return goTo("about-svg-skills");
+      if (n === "achievements") return goTo("achievements-section");
+      if (n === "certificates") return goTo("certificates-section");
+    }));
+    const update = () => {
+      const links = [...nav.querySelectorAll(".fixed-nav-item")];
+      if (landing.visible) return links.forEach(l => l.classList.toggle("active", l.dataset.nav === "home"));
+      const ids = {about:"about-section",experience:"experience-section",skills:"about-svg-skills",projects:"work-section",achievements:"achievements-section",certificates:"certificates-section",contact:"contact-section"};
+      let best=null, dist=Infinity;
+      links.forEach(l => { const el=document.getElementById(ids[l.dataset.nav]); if(!el) return; const d=Math.abs(el.getBoundingClientRect().top-window.innerHeight*.25); if(d<dist){dist=d;best=l;} });
+      links.forEach(l => l.classList.toggle("active", l===best));
+    };
+    setInterval(update,250); update();
+  };
+  if (document.readyState === "complete") setTimeout(initFixedNavigation, 1000); else window.addEventListener("load", () => setTimeout(initFixedNavigation, 1000));
+})();

@@ -1,58 +1,34 @@
-<div align="center">
+# 🚀 Vinit Raj — 3D Animated Portfolio
 
-# ✦ VINIT RAJ
+An interactive 3D portfolio showcasing my journey as a Computer Science & Engineering student, with a focus on programming, data science, machine learning and practical software projects.
 
-### `Computer Science Engineer • Data • AI • Creative Development`
+## 🌐 Portfolio
 
-<p>
-  <i>Building practical ideas with code, data, and AI.</i>
-</p>
+- **Live Portfolio:** https://vinitrj19.github.io/
+- **GitHub:** https://github.com/vinitrj19
+- **LinkedIn:** https://www.linkedin.com/in/hi-this-is-vinit-raj19
 
-<br>
+## 🛠️ Core Technologies
 
-[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-vinitrj19.github.io-111827?style=for-the-badge)](https://vinitrj19.github.io/)
-[![GitHub](https://img.shields.io/badge/GitHub-vinitrj19-181717?style=for-the-badge&logo=github)](https://github.com/vinitrj19)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Vinit_Raj-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/hi-this-is-vinit-raj19)
-[![Email](https://img.shields.io/badge/Email-vinitrj19%40gmail.com-EA4335?style=for-the-badge&logo=gmail)](mailto:vinitrj19@gmail.com)
+- HTML5 / CSS3
+- JavaScript
+- Python, C, C++
+- Pandas, NumPy, Matplotlib, Scikit-learn
+- Three.js / WebGL-based 3D experience
+- GSAP-style animation architecture already included in the template
 
-</div>
+## 📌 Featured Work
 
----
+- Financial Behavior Analyzer
+- Electricity Management & Energy Efficient System
+- E-Blood Bank
+- Travel Manager
+- Agentic AI Career Coach
 
-<div align="center">
+## 🎯 Focus
 
-## ⚡ A DIGITAL SPACE BUILT AROUND ME
+Building practical solutions, strengthening problem-solving skills, and exploring the intersection of software development, data and AI.
 
-</div>
+## 👨‍💻 Author
 
-This is my **interactive 3D personal portfolio**, designed to present my journey as a Computer Science student through an immersive web experience.
-
-Instead of a traditional portfolio, I wanted something that feels more **interactive, visual, and personal** — while still keeping the focus on my projects, skills, learning journey, and technical interests.
-
-> **Code is not just about solving problems.  
-> It's about turning ideas into something people can experience.**
-
----
-
-## 🧭 PORTFOLIO MAP
-
-```text
-                    ┌───────────────────────┐
-                    │       VINIT RAJ       │
-                    │   CSE • DATA • AI     │
-                    └───────────┬───────────┘
-                                │
-             ┌──────────────────┼──────────────────┐
-             │                  │                  │
-             ▼                  ▼                  ▼
-        👨‍💻 ABOUT           🛠️ SKILLS          🚀 WORK
-             │                  │                  │
-             │          ┌───────┼───────┐          │
-             │          ▼       ▼       ▼          │
-             │       Python   C/C++   Data         │
-             │                           Science   │
-             │                                      │
-             └──────────────────┬───────────────────┘
-                                │
-                                ▼
-                         📬 CONTACT
+**Vinit Raj**
